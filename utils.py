@@ -189,7 +189,7 @@ def draw_glyph2(
         else:
             font_size = min(w, h) * 0.80
 
-    new_font = font.font_variant(size=int(font_size))
+    new_font = font.font_variant(size=math.ceil(font_size))
     left, top, right, bottom = new_font.getbbox(text)
     text_width = right - left
     text_height = bottom - top
